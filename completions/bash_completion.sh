@@ -48,4 +48,5 @@ _faker.php()
 }
 
 complete -F _faker.php faker.php
+complete -F _faker.php faker.phar
 
