@@ -24,7 +24,7 @@ class FakerApplication extends \Symfony\Component\Console\Application
 	{
         $firstArgument = $input->getFirstArgument();
         if ($firstArgument === 'list-types') {
-            return 'faker:help';
+            return 'list-types';
         }
 
         return 'faker:generate';
@@ -34,7 +34,7 @@ class FakerApplication extends \Symfony\Component\Console\Application
 	{
 		$defaultCommands   = parent::getDefaultCommands();
 		$defaultCommands[] = new \Bit3\FakerCli\Command\GenerateCommand();
-		$defaultCommands[] = new \Bit3\FakerCli\Command\HelpCommand();
+		$defaultCommands[] = new \Bit3\FakerCli\Command\ListTypesCommand();
 		return $defaultCommands;
 	}
 

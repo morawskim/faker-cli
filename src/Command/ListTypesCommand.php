@@ -10,12 +10,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class HelpCommand extends Command
+class ListTypesCommand extends Command
 {
     protected function configure()
     {
         $this
-            ->setName('faker:help')
+            ->setName('list-types')
             ->addOption(
                 'locale',
                 'l',
