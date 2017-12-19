@@ -238,10 +238,10 @@ It is recommend to use the `--enclosure` option. each occurrence of the `--enclo
 
 ## Completion
 
-Currently only bash is supported. Your `faker-cli.php` must be in your `PATH` env.
+Currently only bash is supported. Your `faker-cli.php` or `faker.phar` must be in your `PATH` env.
 
 ### Phar
-You must download `completions/bash_completion.sh` somewhere and source this file in `.bashrc`  
+You must download `https://raw.githubusercontent.com/bit3/faker-cli/master/completions/bash_completion.sh` somewhere and source this file in `.bashrc`  
 
 ```bash
 source DOWNLOAD_PATH/bash_completion.sh
@@ -251,7 +251,7 @@ source DOWNLOAD_PATH/bash_completion.sh
 
 You only need source `completions/bash_completion.sh` in your `.bashrc`
 ``` bash
-source PATH_TO_FAKER_CLI_SRC/completions/bash_completion.sh
+source PATH_TO_FAKER_CLI/completions/bash_completion.sh
 ```
 
 ## Build your own Phar
