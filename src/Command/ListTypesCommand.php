@@ -39,9 +39,9 @@ class ListTypesCommand extends Command
         $providers = $faker->getProviders();
         foreach ($providers as $provider) {
             $a = new \ReflectionObject($provider);
-            $methods = $a->getMethods(ReflectionMethod::IS_STATIC | ReflectionMethod::IS_PUBLIC);
+            $methods = $a->getMethods(ReflectionMethod::IS_PUBLIC);
             foreach ($methods as $method) {
-                if ($method->isStatic() && $method->isPublic()) {
+                if ($method->isPublic()) {
                     $help[$method->getName()] = $method;
                 }
             }
