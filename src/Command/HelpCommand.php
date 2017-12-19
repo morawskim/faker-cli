@@ -47,6 +47,11 @@ class HelpCommand extends Command
             }
         }
 
+        $result = asort($help);
+        if (false === $result) {
+            throw new \RuntimeException('Can\'t sort types');
+        }
+
         foreach ($help as $item) {
             $doc = $item->getName();
             foreach ($item->getParameters() as $parameter) {
