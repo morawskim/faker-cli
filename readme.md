@@ -11,6 +11,7 @@ You can find the latest phar on the [releases page](https://github.com/bit3/fake
 
 ```bash
 $ wget https://github.com/bit3/faker-cli/releases/download/1.4/faker.phar
+chmod +x ./faker.phar
 $ ./faker.phar
 ```
 
