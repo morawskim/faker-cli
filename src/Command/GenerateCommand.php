@@ -11,7 +11,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class GenerateCommand extends Command
 {
-	protected function configure()
+	protected function configure(): void
 	{
 		$this
 			->setName('faker:generate')
@@ -81,7 +81,7 @@ class GenerateCommand extends Command
 			);
 	}
 
-	protected function execute(InputInterface $input, OutputInterface $output)
+	protected function execute(InputInterface $input, OutputInterface $output): int
 	{
 		$locale = $input->getOption('locale');
 		$seed   = $input->getOption('seed');
@@ -130,6 +130,8 @@ class GenerateCommand extends Command
 			default:
 				throw new \RuntimeException('Unknown output format ' . $format);
 		}
+
+        return 0;
 	}
 
 	/**
@@ -138,7 +140,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputJson(OutputInterface $output, $data)
+	protected function outputJson(OutputInterface $output, $data): void
 	{
 		$json = json_encode($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 		$output->write($json);
@@ -150,7 +152,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputXml(OutputInterface $output, $data)
+	protected function outputXml(OutputInterface $output, $data): void
 	{
 		$doc               = new \DOMDocument();
 		$doc->formatOutput = true;
@@ -208,7 +210,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputCsv(InputInterface $input, OutputInterface $output, $data)
+	protected function outputCsv(InputInterface $input, OutputInterface $output, $data): void
 	{
 		$delimiter = $input->getOption('delimiter');
 		$enclosure = $input->getOption('enclosure');
@@ -236,7 +238,7 @@ class GenerateCommand extends Command
 	 *
 	 * @return array
 	 */
-	protected function flattenArray($data)
+	protected function flattenArray($data): array
 	{
 		if (is_array($data) || is_object($data)) {
 			$buffer = array();
@@ -258,7 +260,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputPhp(OutputInterface $output, $data)
+	protected function outputPhp(OutputInterface $output, $data): void
 	{
 		$php = var_export($data, true);
 		$output->write($php);
@@ -270,7 +272,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputPrintf(InputInterface $input, OutputInterface $output, $data)
+	protected function outputPrintf(InputInterface $input, OutputInterface $output, $data): void
 	{
 		$pattern   = $input->getOption('pattern');
 		$delimiter = $input->getOption('delimiter');
@@ -295,7 +297,7 @@ class GenerateCommand extends Command
 	 * @param OutputInterface $output
 	 * @param mixed           $data
 	 */
-	protected function outputVprintf(InputInterface $input, OutputInterface $output, $data)
+	protected function outputVprintf(InputInterface $input, OutputInterface $output, $data): void
 	{
 		$pattern   = $input->getOption('pattern');
 		$enclosure = $input->getOption('enclosure');
