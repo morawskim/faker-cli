@@ -33,6 +33,7 @@ github:
   stage: release
   image: node:lts-stretch
   script:
+    - git remote set-url origin "https://github.com/morawskim/faker-cli.git"
     - npm ci
     - npx release-it --no-git --no-increment
   only:
