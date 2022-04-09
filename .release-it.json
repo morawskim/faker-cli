@@ -6,5 +6,13 @@
   "npm": {
     "publish": false,
     "ignoreVersion": true
+  },
+  "plugins": {
+    "@release-it/bumper": {
+      "out": {
+        "file": "readme.md",
+        "type": "text/plain"
+      }
+    }
   }
 }
