@@ -1,0 +1,9 @@
+{
+  "github": {
+    "release": true,
+    "assets": ["faker.phar"]
+  },
+  "npm": {
+    "publish": false
+  }
+}
