@@ -1,5 +1,5 @@
 {
-	"name": "bit3/faker-cli",
+	"name": "mmo/faker-cli",
 	"type": "project",
 	"description": "A command line command for the Faker PHP library.",
 	"keywords": ["faker", "fixtures", "data", "cli"],
@@ -10,6 +10,11 @@
 			"email": "tristan.lins@bit3.de",
 			"homepage": "http://bit3.de",
 			"role": "Developer"
+		},
+		{
+			"name": "Marcin Morawski",
+			"email": "marcin@morawskim.pl",
+			"homepage": "http://morawskim.pl"
 		}
 	],
 	"require": {
@@ -28,7 +33,7 @@
 	"bin": ["bin/faker.php"],
 	"extra": {
 		"branch-alias": {
-			"dev-master": "1.0.x-dev"
+			"dev-master": "2.0.x-dev"
 		}
 	}
 }

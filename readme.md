@@ -1,16 +1,16 @@
 # Faker Command Line Tool
 
-[Faker](https://github.com/fzaninotto/faker) is a PHP library that generates fake data for you.
+[Faker](https://github.com/FakerPHP/Faker/) is a PHP library that generates fake data for you.
 This is a command line tool for easy generation of fake data in a static way. 
 
 ## Usage
 
 ### As a Phar (Recommended)
 
-You can find the latest phar on the [releases page](https://github.com/bit3/faker-cli/releases).
+You can find the latest phar on the [releases page](https://github.com/morawskim/faker-cli/releases).
 
 ```bash
-$ wget https://github.com/bit3/faker-cli/releases/download/1.4/faker.phar
+$ wget https://github.com/morawskim/faker-cli/releases/download/2.0.0/faker.phar
 chmod +x ./faker.phar
 $ ./faker.phar
 ```
@@ -18,7 +18,7 @@ $ ./faker.phar
 ### As a Composer Install
 
 ```bash
-$ composer create-project bit3/faker-cli
+$ composer create-project mmo/faker-cli
 $ cd faker-cli
 $ ./bin/faker.php
 ```
@@ -242,7 +242,7 @@ It is recommend to use the `--enclosure` option. each occurrence of the `--enclo
 Currently only bash is supported. Your `faker-cli.php` or `faker.phar` must be in your `PATH` env.
 
 ### Phar
-You must download `https://raw.githubusercontent.com/bit3/faker-cli/master/completions/bash_completion.sh` somewhere and source this file in `.bashrc`  
+You must download `https://raw.githubusercontent.com/morawskim/faker-cli/master/completions/bash_completion.sh` somewhere and source this file in `.bashrc`  
 
 ```bash
 source DOWNLOAD_PATH/bash_completion.sh

@@ -1,0 +1,41 @@
+stages:
+  - prepare
+  - build
+  - release
+
+composer:
+  stage: prepare
+  image: thecodingmachine/php:8.1-v4-cli-node16
+  script:
+    - php -v
+    - composer config -g cache-dir "$CI_PROJECT_DIR/.composer-cache"
+    - composer install --prefer-dist --no-ansi --no-interaction --no-progress
+  artifacts:
+    paths:
+      - vendor/
+    expire_in: 30 days
+    when: on_success
+  cache:
+    key: "$CI_COMMIT_REF_SLUG"
+    paths:
+      - .composer-cache
+
+phar:
+  stage: build
+  image: jakzal/phpqa:alpine
+  script:
+    - box compile
+  artifacts:
+    paths:
+      - ./faker.phar
+
+github:
+  stage: release
+  image: node:lts-stretch
+  script:
+    - npm ci
+    - npx release-it --no-git --no-increment
+  only:
+    - tags
+  except:
+    - branches

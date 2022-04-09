@@ -4,6 +4,7 @@
     "assets": ["faker.phar"]
   },
   "npm": {
-    "publish": false
+    "publish": false,
+    "ignoreVersion": true
   }
 }
