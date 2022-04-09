@@ -2,3 +2,6 @@
 /composer.phar
 /faker.phar
 /box.phar
+/.idea/
+
+/node_modules/
