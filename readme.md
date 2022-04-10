@@ -1,5 +1,7 @@
 # Faker Command Line Tool
 
+This project is a fork of [bit3archive/faker-cli](https://github.com/bit3archive/faker-cli), which is no more maintained - see [comment](https://github.com/bit3archive/faker-cli/pull/8#issuecomment-354099233)
+
 [Faker](https://github.com/FakerPHP/Faker/) is a PHP library that generates fake data for you.
 This is a command line tool for easy generation of fake data in a static way. 
 
@@ -10,7 +12,7 @@ This is a command line tool for easy generation of fake data in a static way.
 You can find the latest phar on the [releases page](https://github.com/morawskim/faker-cli/releases).
 
 ```bash
-$ wget https://github.com/morawskim/faker-cli/releases/download/2.0.0/faker.phar
+$ wget https://github.com/morawskim/faker-cli/releases/download/2.0.0-alpha.3/faker.phar
 chmod +x ./faker.phar
 $ ./faker.phar
 ```
