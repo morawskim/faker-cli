@@ -1,0 +1,59 @@
+{
+    "name": "mmo/faker-cli",
+    "type": "project",
+    "description": "A command line command for the Faker PHP library.",
+    "keywords": [
+        "faker",
+        "fixtures",
+        "data",
+        "cli"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tristan Lins",
+            "email": "tristan.lins@bit3.de",
+            "homepage": "http://bit3.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Marcin Morawski",
+            "email": "marcin@morawskim.pl",
+            "homepage": "http://morawskim.pl"
+        }
+    ],
+    "require": {
+        "symfony/console": "^5.0",
+        "php": "^8.0",
+        "fakerphp/faker": "^1.19"
+    },
+    "replace": {
+        "bit3/faker-cli": "^1.4"
+    },
+    "suggest": {
+        "ext-dom": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bit3\\FakerCli\\": "../../src/"
+        }
+    },
+    "bin": [
+        "bin/faker.php"
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    },
+    "require-dev": {
+        "g1a/composer-test-scenarios": "^3.2",
+        "phpunit/phpunit": "^9.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "g1a/composer-test-scenarios": true
+        },
+        "vendor-dir": "../../vendor"
+    }
+}

@@ -1,4 +1,4 @@
-Copyright (c) 2014 Tristan Lins
+Copyright (c) 2014-2022 Tristan Lins
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -17,3 +17,17 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+DEPENDENCY LICENSES:
+
+Name                              Version  Licenses
+fakerphp/faker                    v1.19.0  MIT
+psr/container                     2.0.2    MIT
+symfony/console                   v6.0.7   MIT
+symfony/deprecation-contracts     v3.0.1   MIT
+symfony/polyfill-ctype            v1.25.0  MIT
+symfony/polyfill-intl-grapheme    v1.25.0  MIT
+symfony/polyfill-intl-normalizer  v1.25.0  MIT
+symfony/polyfill-mbstring         v1.25.0  MIT
+symfony/service-contracts         v3.0.1   MIT
+symfony/string                    v6.0.3   MIT

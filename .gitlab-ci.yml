@@ -1,5 +1,6 @@
 stages:
   - prepare
+  - tests
   - build
   - release
 
@@ -19,6 +20,74 @@ composer:
     key: "$CI_COMMIT_REF_SLUG"
     paths:
       - .composer-cache
+
+.test-php8.0:
+  stage: tests
+  image: thecodingmachine/php:8.0-v4-cli-node16
+  dependencies: []
+  before_script:
+    - sudo apt-get update
+    - sudo apt-get install -y make
+    - sudo chown -R docker:docker .scenarios.lock/
+
+.test-php8.1:
+  stage: tests
+  image: thecodingmachine/php:8.1-v4-cli-node16
+  dependencies: []
+  before_script:
+    - sudo apt-get update
+    - sudo apt-get install -y make
+    - sudo chown -R docker:docker .scenarios.lock/
+
+test-sf3-8.0:
+  extends: .test-php8.0
+  script:
+    - make test-sf3
+
+test-sf4-8.0:
+  extends: .test-php8.0
+  script:
+    - make test-sf4
+
+test-sf5-8.0:
+  extends: .test-php8.0
+  script:
+    - make test-sf5
+
+test-sf6-8.0:
+  extends: .test-php8.0
+  script:
+    - make test-sf6
+
+test-8.0:
+  extends: .test-php8.0
+  script:
+    - make test-sf
+
+test-sf3-8.1:
+  extends: .test-php8.1
+  script:
+    - make test-sf3
+
+test-sf4-8.1:
+  extends: .test-php8.1
+  script:
+    - make test-sf4
+
+test-sf5-8.1:
+  extends: .test-php8.1
+  script:
+    - make test-sf5
+
+test-sf6-8.1:
+  extends: .test-php8.1
+  script:
+    - make test-sf6
+
+test-8.1:
+  extends: .test-php8.1
+  script:
+    - make test-sf
 
 phar:
   stage: build
