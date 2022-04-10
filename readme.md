@@ -12,7 +12,7 @@ This is a command line tool for easy generation of fake data in a static way.
 You can find the latest phar on the [releases page](https://github.com/morawskim/faker-cli/releases).
 
 ```bash
-$ wget https://github.com/morawskim/faker-cli/releases/download/2.0.0-alpha.3/faker.phar
+$ wget https://github.com/morawskim/faker-cli/releases/download/2.0.0/faker.phar
 chmod +x ./faker.phar
 $ ./faker.phar
 ```
