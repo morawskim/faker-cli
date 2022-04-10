@@ -34,3 +34,7 @@ test-sf:
 
 .PHONY: test
 test: test-sf3 test-sf4 test-sf5 test-sf6 test-sf
+
+.PHONY: release
+release:
+	npx release-it
